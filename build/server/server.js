@@ -304,6 +304,7 @@ function pathToBundle(path) {
 // server when webpack is bundling
 proxy.on('error', function(e) {
   console.log('Could not connect to proxy, please try again...');
+  console.log(e);
 });
 
 server = app.listen(port, function () {
