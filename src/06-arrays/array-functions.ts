@@ -17,7 +17,7 @@ export let fillRange = (low: number, high: number): number[] => {
 };
 
 /**
- * Given a number array, compute their sum.
+ * Given a number array, compute the sum of its elements.
  * 
  * @param a 
  */

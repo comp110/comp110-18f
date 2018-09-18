@@ -1,33 +1,5 @@
 import { print } from "introcs";
 
-/**
- * This function is given a test name for diagnostic purposes.
- * 
- * It is then given an expected number. This should be what your
- * test is *expecting* to be the correct result.
- * 
- * It is then given the actual number in question. This will be
- * compared with the expected number for equality.
- * 
- * If the two numbers are equal, then the test passes. If they are
- * different in any way, then the test fails.
- * 
- * @param name 
- * @param expected 
- * @param actual 
- */
-export let testNumber = (name: string, expected: number, actual: number): void => {
-    let passed = expected === actual;
-
-    if (passed) {
-        print("PASS: " + name);
-    } else {
-        print("FAIL: " + name);
-        print("-- Expected: " + expected);
-        print("-- Actually: " + actual);
-    }
-};
-
 /*
  * This function is given a test name for diagnostic purposes.
  * 
@@ -49,6 +21,34 @@ export let testArray = (name: string, expected: number[], actual: number[]): voi
     } else {
         passed = false;
     }
+
+    if (passed) {
+        print("PASS: " + name);
+    } else {
+        print("FAIL: " + name);
+        print("-- Expected: " + expected);
+        print("-- Actually: " + actual);
+    }
+};
+
+/**
+ * This function is given a test name for diagnostic purposes.
+ * 
+ * It is then given an expected number. This should be what your
+ * test is *expecting* to be the correct result.
+ * 
+ * It is then given the actual number in question. This will be
+ * compared with the expected number for equality.
+ * 
+ * If the two numbers are equal, then the test passes. If they are
+ * different in any way, then the test fails.
+ * 
+ * @param name 
+ * @param expected 
+ * @param actual 
+ */
+export let testNumber = (name: string, expected: number, actual: number): void => {
+    let passed = expected === actual;
 
     if (passed) {
         print("PASS: " + name);

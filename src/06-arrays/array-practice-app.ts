@@ -1,10 +1,11 @@
-import { testNumber, testArray } from "./test-util";
+import { fillZeros, fillRange, sum } from "./array-functions";
 
-import { fillRange } from "./array-functions";
+import { testArray, testNumber } from "./test-util";
 
 export let main = async () => {
+    
     // TODO: Add Test Cases
-};
 
+};
 
 main();
