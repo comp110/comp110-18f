@@ -42,10 +42,6 @@ export let testArray = (name: string, expected: number[], actual: number[]): voi
  * 
  * If the two numbers are equal, then the test passes. If they are
  * different in any way, then the test fails.
- * 
- * @param name 
- * @param expected 
- * @param actual 
  */
 export let testNumber = (name: string, expected: number, actual: number): void => {
     let passed = expected === actual;
