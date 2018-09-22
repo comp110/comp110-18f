@@ -10,8 +10,9 @@ export let main = async () => {
     
     // Part 1. count
     // Use Cases
-    testNumber("count([10, 20], 20)", 0, count([10, 20], 20));
+    testNumber("count([10, 10], 20)", 0, count([10, 10], 20));
     testNumber("count([10, 20], 20)", 1, count([10, 20], 20));
+    testNumber("count([20, 20], 20)", 2, count([20, 20], 20));
     // Edge Cases
     testNumber("count([], 20)", 0, count([], 20));
     testNumber("count([10, 30], 20)", 0, count([10, 30], 20));
