@@ -67,13 +67,13 @@ export let testArray = (name: string, expected: number[], actual: number[]): voi
 /*
  * This function is given a test name for diagnostic purposes.
  * 
- * It is then given an expected number array. This should be what your
+ * It is then given an expected boolean value. This should be what your
  * test is *expecting* to be the correct result.
  * 
- * It is then given the actual number array in question. This will be
+ * It is then given the actual boolean in question. This will be
  * compared with the expected array for equality.
  * 
- * If the two number arrays are equal, then the test passes. If they are
+ * If the two booleans are equal, then the test passes. If they are
  * different in any way, then the test fails.
  */
 export let testBoolean = (name: string, expected: boolean, actual: boolean): void => {
