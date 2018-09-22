@@ -62,3 +62,28 @@ export let testArray = (name: string, expected: number[], actual: number[]): voi
         print("-- Actually: " + actual);
     }
 };
+
+
+/*
+ * This function is given a test name for diagnostic purposes.
+ * 
+ * It is then given an expected number array. This should be what your
+ * test is *expecting* to be the correct result.
+ * 
+ * It is then given the actual number array in question. This will be
+ * compared with the expected array for equality.
+ * 
+ * If the two number arrays are equal, then the test passes. If they are
+ * different in any way, then the test fails.
+ */
+export let testBoolean = (name: string, expected: boolean, actual: boolean): void => {
+    let passed = expected === actual;
+
+    if (passed) {
+        print("PASS: " + name);
+    } else {
+        print("FAIL: " + name);
+        print("-- Expected: " + expected);
+        print("-- Actually: " + actual);
+    }
+};
