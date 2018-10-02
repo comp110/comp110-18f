@@ -1,6 +1,6 @@
 import { print, promptString, promptNumber } from "introcs";
-
 import { Pizza } from "./Pizza";
+import { price } from "./PizzaUtils";
 
 export let main = async () => {
 
@@ -31,11 +31,19 @@ export let main = async () => {
     print("The first Pizza's size is...");
     // TODO 3: Print the 1st pizza's size
 
+    // TODO: Next Hands On Starts Here
+
 };
 
 let orderPrice = (pizzas: Pizza[]): number => {
+    let total = 0;
+
     // TODO: Calculate the total price of an array of Pizzas
-    return 0;
+    for (let i = 0; i < pizzas.length; i++) {
+        total += price(pizzas[i]);
+    }
+
+    return total;
 };
 
 main();

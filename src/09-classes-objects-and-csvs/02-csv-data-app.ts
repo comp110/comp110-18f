@@ -9,13 +9,19 @@ class Game {
 }
 
 export let main = async()  => {
-    let data = await csvToArray("Select Data", Game);
-    print(data[0]);
-    print([1, 2, 3]);
-    print(["hello", "", "world"]);
-    print([true, false]);
+    
+    let data = await csvToArray("Select joel-berry-ii.csv", Game);
+    
     print(data);
-    print("hi");
+
+};
+
+let filterDoubleDigitPoints = (games: Game[]): Game[] => {
+    let matches: Game[] = [];
+    
+    // TODO
+
+    return matches;
 };
 
 main();
