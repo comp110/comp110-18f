@@ -1,44 +1,66 @@
 import { forward, left, right, moveTo, turnTo, setOnClick, setSpeed } from "introcs/turtle";
 
-let turnAround = () => {
-    left(Math.PI);
+export let main = async () => {
+    setSpeed(1);
+    tree(100, 300);
+    setOnClick(tree);
 };
 
 let tree = (x: number, y: number) => {
     moveTo(x, y);
-    turnTo(-Math.PI / 2);
+    turnUp(); // Face the turtle upward
+    // Begin the tree by drawing the root branch!
     branch(y / 6);
-};
-
-let growth = () => {
-    return 0.3 + Math.random() * 0.5;
-};
-
-let rotation = () => {
-    return (-.1 * Math.PI) + (Math.random() * 0.2 * Math.PI); 
 };
 
 let branch = (length: number) => {
     if (length < 5) {
-        // Turn around
+        // Turn around... don't drown!
         turnAround();
     } else {
+        // TODO:
+
+        // 1. Move forward by length to establish this branch
         forward(length);
         
-        let leftBranchRotation = Math.PI / 6 + rotation();
-        left(leftBranchRotation);
-        branch(length * growth());
-        right(leftBranchRotation);
-
+        // 2. Draw Left Branch
+        // 2.a Turn left by leftBranchRotation amount
+        let leftBranchRotation = Math.PI / 6;
+        
+        // 2.b Recursively branch by 0.6 * length
+        
+        // 2.c Turn right by the amount turned left to reset
+        
+        // 3. Turn around
         turnAround();
 
-        let rightBranchRotation = Math.PI / 6 + rotation();
-        right(rightBranchRotation);
-        branch(length * growth());
-        left(rightBranchRotation);        
-        forward(length);
+        // 4. Draw Right Branch
+        // 4.a Turn right by rightBranchRotation amount
+        let rightBranchRotation = Math.PI / 6;
+        
+        // 4.b Recursively branch by 0.6 * length
+        
+        // 4.c Turn left by rightBranchRotation amount to reset
+        
+        // 5. Move forward by length (back to the starting point of branch)
+        
     }
 };
 
-setSpeed(1);
-setOnClick(tree);
+let turnUp = (): void => {
+    turnTo(-Math.PI / 2);
+};
+
+let turnAround = () => {
+    left(Math.PI);
+};
+
+let randomGrowth = () => {
+    return 0.3 + Math.random() * 0.5;
+};
+
+let randomRotation = () => {
+    return (Math.PI / 6) + (-.1 * Math.PI) + (Math.random() * 0.2 * Math.PI); 
+};
+
+main();
