@@ -1,28 +1,31 @@
 import { print } from "introcs";
 
-import { Node, toString } from "./Node";
+class Node {
+    data: string = "";
+    next: Node = null;
+}
 
 export let main = async () => {
 
-    let list: Node;
-    let temp: Node;
+    let head = new Node();
+    head.data = "C";
+    let temp = head;
 
-    list = new Node();
-    list.data = "C";
-    temp = list;
+    head = new Node();
+    head.data = "N";
+    head.next = temp;
+    temp = head;
 
-    list = new Node();
-    list.data = "N";
-    list.next = temp;
-    temp = list;
+    // TODO #1: Construct a new Node
+    // 1.1 Set its data to "U"
+    // 1.2 Set its next property to temp
 
-    list = new Node();
-    list.data = "U";
-    list.next = temp;
-
-    print(list.data);
-    print(list.next.data);
-    print(list.next.next.data);
+    print(head.data);
+    print(head.next.data);
+    
+    // TODO #2: Print out the data
+    // property of the third Node 
+    // which has "C" as its data.
 
 };
 
