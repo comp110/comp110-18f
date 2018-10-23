@@ -1,11 +1,6 @@
 import { print } from "introcs";
 import { Node, cons, first, rest, toString } from "./list";
 
-// TODO
-let count = (list: Node): number => {
-    return 0;
-};
-
 export let main = async () => {
     
     // Establish a List of values
@@ -16,6 +11,11 @@ export let main = async () => {
     print("The number of names in the list is...");
     print(count(names));
 
+};
+
+// TODO
+let count = (list: Node): number => {
+    return 0;
 };
 
 main();
