@@ -5,8 +5,6 @@ export class Node {
     next: Node = null;
 }
 
-export type List = Node; // List is just an alias of Node
-
 /* Constructor */
 
 export let cons = (data: string, next: Node): Node => {

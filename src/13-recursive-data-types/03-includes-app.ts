@@ -1,15 +1,17 @@
 import { print } from "introcs";
-import { List, cons, first, rest } from "./list";
+import { Node, cons, first, rest, toString } from "./list";
 
 // TODO: Implement the includes Function
-let includes = (list: List, search: string): boolean => {
+let includes = (list: Node, search: string): boolean => {
     return false;
 };
 
 export let main = async () => {
     let names = cons("Carol", cons("Kevin Bacon", cons("Roy", null)));
-    print(includes(names, "Kevin Bacon"));
+    print("names: " + toString(names));
 
+    print("Kevin Bacon is in the names list...");
+    print(includes(names, "Kevin Bacon"));
 };
 
 main();

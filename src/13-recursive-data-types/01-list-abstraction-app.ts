@@ -8,12 +8,8 @@ export let main = async () => {
     print(toString(list));
 
     // TODO: cons U onto list
-    list = cons("U", list);
-    print(toString(list));
 
     // TODO: Print the 2nd and 3rd Values
-    print(first(rest(list)));
-    print(first(rest(rest(list))));
 
 };
 
