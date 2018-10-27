@@ -1,4 +1,5 @@
 /* Data Structure: Linked List */
+/* Improved since Lecture 13: Generic Definitions */
 
 export class Node<T> {
     data: T;
