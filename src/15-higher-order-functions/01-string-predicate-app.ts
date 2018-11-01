@@ -1,5 +1,5 @@
 import { print } from "introcs";
-import { List, cons, first, rest, listify } from "introcs/list";
+import { Node, cons, first, rest, listify } from "introcs/list";
 
 let main = async () => {
     let input = listify(
@@ -15,23 +15,22 @@ let main = async () => {
     );
 
     // TODO #2: Change the predicate function to use longWords
-    let output = filter(input, hasAnXorZ);
+    let output = filter(input, startsWithT);
     print(output); 
 };
 
 // Predicates
-let hasAnXorZ = (word: string): boolean => {
-    return word.includes("x") || word.includes("z");
+let startsWithT = (word: string): boolean => {
+    return word[0] === "t";
 };
 
 // TODO #1: Define the `longWords` function below
-
 
 interface Predicate {
     (item: string): boolean;
 }
 
-let filter = (xs: List<string>, test: Predicate): List<string> => {
+let filter = (xs: Node<string>, test: Predicate): Node<string> => {
     if (xs === null) {
         return null;
     } else if (test(first(xs))) {

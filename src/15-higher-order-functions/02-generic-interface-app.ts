@@ -1,5 +1,5 @@
 import { print } from "introcs";
-import { List, cons, first, rest, listify } from "introcs/list";
+import { Node, cons, first, rest, listify } from "introcs/list";
 
 let main = async () => {
     let input = listify(-2, -1, 0, 1, 2);
@@ -14,7 +14,7 @@ let main = async () => {
 // Predicates "Test Functions"
 let isPositive = (item: number): boolean => { return item > 0; };
 let is3Letters = (item: string): boolean => { return item.length === 3; };
-let hasAnO = (item: string): boolean => { return item.includes("o"); };
+let startsWithB = (item: string): boolean => { return item[0] === "b"; };
 
 // TODO #1: Make the Predicate interface generic
 interface Predicate {
@@ -22,7 +22,7 @@ interface Predicate {
 }
 
 // TODO #2: Make the filter function generic
-let filter = (xs: List<number>, test: Predicate): List<number> => {
+let filter = (xs: Node<number>, test: Predicate): Node<number> => {
     if (xs === null) {
         return null;
     } else if (test(first(xs))) {
