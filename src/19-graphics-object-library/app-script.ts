@@ -1,4 +1,4 @@
-import { print } from "introcs";
+import { print, random } from "introcs";
 
 import {
     SVG,
@@ -22,7 +22,9 @@ let artboard = new SVG("artboard");
 
 /** Begin main program */
 export let main = async () => {
-    // TODO
+    let shapes = new Group();
+   
+    artboard.render(shapes);
 };
 
-main();
+setInterval(main, 30);
