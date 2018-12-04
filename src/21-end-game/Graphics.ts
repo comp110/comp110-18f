@@ -89,7 +89,7 @@ export class Graphics {
         carton.stroke = new Stroke(carton.fill, 16, "round", "round");
         cartonGraphics.add(carton);
     
-        function eggGraphic(egg: Egg, index: number): Group {
+        let eggGraphic = (egg: Egg, index: number): Group => {
             let graphics: Group = new Group();
         
             let x: number = index % 2 * (DIAMETER + GUTTER);
@@ -111,13 +111,13 @@ export class Graphics {
                 }
             }
         
-            graphics.onclick = function(): void {
+            graphics.onclick = (): void => {
                 game.pick(index);
                 self.draw();
             };
         
             return graphics;
-        }
+        };
 
         game.carton
             .eggs
