@@ -15,7 +15,7 @@ export class EggRoulette {
         
         // TODO #1.2: Call the boilEggs method
 
-        // TODO #2.2: Call the shuffleEggs method
+        // TODO #4.2: Call the shuffleEggs method
 
     }
 
